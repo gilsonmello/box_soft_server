@@ -22,6 +22,7 @@
     </div>--}}
     @include('mobile.includes.messages')
     @if(!$boxesOpen->isEmpty())
+        <h4>Caixas</h4>
         @forelse($boxesOpen as $box)
             <div class="row clearfix">
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -33,12 +34,12 @@
                                 </span>
                                 <small>R${!! number_format($box->value_total, 2, ',', '.'); !!}</small>
                             </h2>
-                            <ul class="header-dropdown m-r--5">
-                                {{--<li>
+                            {{--<ul class="header-dropdown m-r--5">
+                                <li>
                                     <a href="javascript:void(0);" data-toggle="cardloading" data-loading-effect="timer">
                                         <i class="material-icons">loop</i>
                                     </a>
-                                </li>--}}
+                                </li>
                                 <li class="dropdown">
                                     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                         <i class="material-icons">more_vert</i>
@@ -49,11 +50,18 @@
                                         <li><a href="javascript:void(0);" class=" waves-effect waves-block">Something else here</a></li>
                                     </ul>
                                 </li>
-                            </ul>
+                            </ul>--}}
                         </div>
                         <div class="body">
-                            @forelse($box->participants()->orderBy('id', 'desc')->get()->take(5) as $participant)
-                                {{ $participant->name }},
+                            @php
+                                $last_boxes = $box->participants()->orderBy('id', 'desc')->get()->take(5)
+                            @endphp
+                            @forelse($last_boxes as $key => $participant)
+                                @if(count($last_boxes) - 1 == $key)
+                                    {{ $participant->name }}
+                                @else
+                                    {{ $participant->name }},
+                                @endif
                             @empty
                                 Vazio
                             @endforelse
