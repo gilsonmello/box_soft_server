@@ -14,8 +14,13 @@ class InstalmentController extends Controller
         $instalment->is_paid = 1;
         $instalment->date_paid = date('Y-m-d H:i:s');
         if($instalment->save()) {
-            return redirect()->back();
+            return redirect()
+                ->back()
+                ->withFlashSuccess('Fatura paga com sucesso.');
         }
+        return redirect()
+                ->back()
+                ->withFlashDanger('Erro ao pagar fatura.');
     }
 
     /**
