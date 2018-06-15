@@ -36,6 +36,9 @@
                 <div class="header">
                     <h2>
                         Filtro
+                        <a href="{{ route('mobile.participants.create') }}" style="margin-right: 40px" class="btn btn-xs pull-right btn-primary">
+                            Cadastrar Novo Participante
+                        </a>
                     </h2>
                     <div class="header-dropdown m-r--5">
                         <button type="button" class="btn btn-xs" data-toggle="collapse" href="#filtro"><i class="fa fa-minus"></i></button>
@@ -102,7 +105,7 @@
         </div>
 
     @empty
-        Vazio
+        Você não possui nenhum parcipante cadastrado, clique no botão acima para cadastrar
     @endforelse
 
     <div class="row clearfix">
