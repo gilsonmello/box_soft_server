@@ -62,7 +62,7 @@
                 </div>
             </div>
         @empty
-        
+
         @endforelse
     @else
         Você não possui nenhum caixa com status fechado<br>
@@ -74,7 +74,7 @@
                 Clique sobre o ícone de configurações
             </li>
             <li>
-                Clique em gerar mensalidades
+                Clique em Mensalidades
             </li>
             <li>
                 Clique no botão gerar mensalidades

@@ -22,6 +22,7 @@
 
     <div class="row clearfix">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h4>Dados do Caixa</h4>
             <div class="card">
                 <div class="body">
                     {!! Form::model($box, ['route' => ['mobile.boxes.participants', $box->id], 'class' => '', 'role' => 'form', 'method' => 'post']) !!}
@@ -94,6 +95,7 @@
         </div>
     </div>
 
+    <h4>Participantes <small>Clique sobre o nome do participante para visualizar mensalidades</small></h4>
     @if($box->has_instalment)
         @forelse($box->participants as $value)
             <div class="row clearfix">
@@ -101,7 +103,9 @@
                     <div class="card" style="margin-bottom: 0;">
                         <div class="header">
                             <h2>
-                                {!! $value->name !!}
+                                <span href="{{route('mobile.participants.instalments', [$box->id, $value->id])}}">
+                                    {!! $value->name !!}
+                                </span>
                                 <small>
                                     {!! $value->email !!}
                                 </small>
@@ -125,13 +129,10 @@
                 </div>
             </div>
         @empty
-            Vazio
+            O caixa não possui nenhum participante com mensalidades a pagar
         @endforelse
-
-        <div class="row clearfix">
-            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-                <h2>&nbsp;</h2>
-            </div>
-        </div>
+    @else
+        O caixa não possui nenhum participante com mensalidades a pagar. <br>
+        Clique no botão "Gerar Mensalidades" acima para gerar as mensalidades dos participantes.
     @endif
 @endsection

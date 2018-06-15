@@ -2,29 +2,7 @@
 
 @extends('layouts.mobile')
 
-@section('mobile.screen_name')
-    <a class="navbar-brand" href="#">Parcelas</a>
-@endsection
-
 @section('content')
-    <div class="block-header">
-        <div class="body">
-            <ol class="breadcrumb breadcrumb-col-pink">
-                <li>
-                    <a href="{{ route('mobile.boxes.participants', $box_id) }}">
-                        Caixa
-                    </a>
-                </li>
-                <li class="active">
-                    Parcelas
-                </li>
-                <li class="active">
-                    {{ $participant->name }}
-                </li>
-            </ol>
-        </div>
-    </div>
-    @include('mobile.includes.messages')
     {{--<div class="row clearfix">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="card">
@@ -61,6 +39,7 @@
         </div>
     </div>--}}
 
+    <h4>Mensalidades <small>Clique no menu de configurações para alterar o status.</small></h4>
     @forelse($instalments as $value)
         <div class="row clearfix">
             <div class="col-lg-12 col-xs-12 col-md-12 col-sm-12">
