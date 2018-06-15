@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{ asset('applications/mobile/css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('applications/mobile/css/plugins.css') }}">
 </head>
-<body class="login-page" style="background: #fff">
+<body class="login-page">
     <div class="login-box">
         <div class="logo">
             <a href="javascript:void(0);">Box<b>Soft</b></a>
@@ -32,7 +32,7 @@
                             <i class="material-icons">person</i>
                         </span>
                         <div class="form-line {{ $errors->has('email') ? ' focused error' : '' }}">
-                            <input type="email" class="form-control" name="email" placeholder="E-mail" required autofocus>
+                            <input type="email" value={{old('email')}} class="form-control" name="email" placeholder="E-mail" required autofocus>
                         </div>
                     </div>
                     <div class="input-group">
