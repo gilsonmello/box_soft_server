@@ -29,6 +29,7 @@
         </div>
         <h2>Participantes</h2>
     </div>--}}
+    @include('mobile.includes.messages')
 
     <div class="row clearfix">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

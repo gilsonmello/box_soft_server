@@ -17,7 +17,6 @@ class UserController extends Controller
     public function index()
     {
         $user = User::findOrFail(1);
-
         return view('mobile.auth.edit', compact('user'));
     }
 

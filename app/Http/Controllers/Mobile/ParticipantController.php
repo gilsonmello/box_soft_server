@@ -175,8 +175,8 @@ class ParticipantController extends Controller
      */
     public function destroy($id)
     {
-        $participant = Box::find($id);
-        if($participant->destroy($id)){
+        $participant = Participant::find($id);
+        if($participant->delete($id)){
             return redirect()
                 ->route('mobile.participants.index')
                 ->withFlashSuccess('Participante deletado com sucesso');
