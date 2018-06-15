@@ -38,7 +38,7 @@
             </div>
         </div>
     </div>--}}
-
+    @include('mobile.includes.messages')
     <h4>Mensalidades <small>Clique no menu de configurações para alterar o status.</small></h4>
     @forelse($instalments as $value)
         <div class="row clearfix">
