@@ -1,0 +1,40 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import '~bootstrap/dist/css/bootstrap.css';
+
+// Font Awesome
+@import '~font-awesome/scss/font-awesome';
+
+
+@import "~adminbsb-materialdesign/scss/themes/_all-themes";
+
+//@import "~ionicons-npm/scss/ionicons";
+
+//@import "~icheck/skins/all.css";
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+section.content {
+	margin: 20px 15px 0 15px !important;	
+}
+
+.active .fa-circle-o {
+  color: #3c8dbc;
+}
+
+.select2-selection__choice {
+  color: #000 !important;
+}
+
+.main-sidebar {
+  padding-top: 50px;
+}
