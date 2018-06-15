@@ -42,7 +42,7 @@
                         </a>
                     </h2>
                     <div class="header-dropdown m-r--5">
-                        <button type="button" class="btn btn-xs" data-toggle="collapse" href="#filtro"><i class="fa fa-minus"></i></button>
+                        <button type="button" aria-expanded="false" class="btn btn-xs" data-toggle="collapse" href="#filtro"><i class="fa fa-plus"></i></button>
                     </div>
                 </div>
                 {!! Form::open(array('route' => array('mobile.participants.index'), 'class' => 'body collapse', 'id' => 'filtro', 'method' => 'get'))  !!}

@@ -43,7 +43,7 @@
                         </a>
                     </h2>
                     <div class="header-dropdown m-r--5">
-                        <button type="button" class="btn btn-xs" data-toggle="collapse" href="#filtro"><i class="fa fa-minus"></i></button>
+                        <button type="button" aria-expanded="false" class="btn btn-xs" data-toggle="collapse" href="#filtro"><i class="fa fa-plus"></i></button>
                     </div>
                 </div>
                 {!! Form::open(array('route' => array('mobile.boxes.index'), 'class' => 'body collapse', 'id' => 'filtro', 'method' => 'get'))  !!}
@@ -93,7 +93,7 @@
                                 <ul class="dropdown-menu pull-right">
                                     <li>
                                         <a href="{{ route('mobile.boxes.participants', $value->id) }}" class="waves-effect waves-block">
-                                            Participantes
+                                            Mensalidades
                                         </a>
                                     </li>
                                     @if(($value->has_instalment == 1 && $value->last_award == null) || differenceInMonths($value->last_award, date('Y-m-d')) >= 1)

@@ -142,4 +142,14 @@ $(function () {
         window.location.href = $(this).attr('href');
     });
 
+    $('[data-toggle="collapse"]').on('click', function() {
+        var expanded = $(this).attr('aria-expanded');
+        if(expanded == "false") {
+            $(this).find('i').removeClass('fa-plus')
+                .addClass('fa-minus');
+        } else {
+            $(this).find('i').removeClass('fa-minus')
+                .addClass('fa-plus');
+        }
+    });
 });
