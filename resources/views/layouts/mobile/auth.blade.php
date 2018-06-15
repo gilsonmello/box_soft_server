@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{ asset('applications/mobile/css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('applications/mobile/css/plugins.css') }}">
 </head>
-<body class="login-page">
+<body class="login-page" style="background: #fff">
     <div class="login-box">
         <div class="logo">
             <a href="javascript:void(0);">Box<b>Soft</b></a>
@@ -23,8 +23,8 @@
         </div>
         <div class="card">
             <div class="body">
+                @include('mobile.includes.messages')
                 <form method="POST" class="mobile-auth" action="{{ route('mobile.auth.login') }}" role="form">
-                    @include('mobile.includes.messages')
 
                     {{ csrf_field() }}
                     <div class="input-group form-float">
@@ -32,7 +32,7 @@
                             <i class="material-icons">person</i>
                         </span>
                         <div class="form-line {{ $errors->has('email') ? ' focused error' : '' }}">
-                            <input type="email" class="form-control" name="email" placeholder="Username" required autofocus>
+                            <input type="email" class="form-control" name="email" placeholder="E-mail" required autofocus>
                         </div>
                     </div>
                     <div class="input-group">

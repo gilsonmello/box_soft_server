@@ -17,7 +17,7 @@
 </head>
 <body class="signup-page">
 
-<div class="signup-box">
+<div class="signup-box" style="background: #fff">
     <div class="logo">
         <a href="javascript:void(0);">Box<b>Soft</b></a>
         <small>Gerencie seus caixas com segurança</small>
