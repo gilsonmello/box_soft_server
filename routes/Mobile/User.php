@@ -18,3 +18,5 @@ Route::resource('users', 'UserController', [
         'show'
     ]
 ]);
+
+Route::get('users/change', 'UserController@change')->name('mobile.auth.change');

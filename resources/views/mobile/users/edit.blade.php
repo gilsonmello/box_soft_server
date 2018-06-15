@@ -26,14 +26,14 @@
 
     <div class="card">
         <div class="body">
-            {!! Form::model($user, ['route' => ['mobile.users.update', $user->id], 'class' => '', 'role' => 'form', 'method' => 'put']) !!}
+            {!! Form::open(['route' => ['mobile.users.update', auth()->user()->id], 'class' => '', 'role' => 'form', 'method' => 'put']) !!}
                 {{ Form::hidden('id', $user->id) }}
                 <div class="row clearfix">
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
                         <div class="form-group form-float">
                             <div class="form-line {{ $errors->has('name') ? 'focused error' : '' }}">
                                 {!! Form::label('name', 'Nome*', ['class' => '']) !!}
-                                {!! Form::text('name', null, [
+                                {!! Form::text('name', $user->name, [
                                     'class' => 'form-control',
                                     'required',
                                     'autofocus',
@@ -49,7 +49,7 @@
                         <div class="form-group form-float">
                             <div class="form-line {{ $errors->has('email') ? 'focused error' : '' }}">
                                 {!! Form::label('email', 'E-mail*', ['class' => '']) !!}
-                                {!! Form::email('email', null, [
+                                {!! Form::email('email', $user->email, [
                                     'class' => 'form-control',
                                     'required',
                                     'disabled',

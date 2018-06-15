@@ -59,9 +59,22 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id = null)
     {
-        $user = User::findOrFail($id);
+        $user = User::findOrFail(auth()->user()->id);
+        return view('mobile.users.edit', compact('user'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function change()
+    {
+        $user = User::findOrFail(auth()->user()->id);
         return view('mobile.users.edit', compact('user'));
     }
 
