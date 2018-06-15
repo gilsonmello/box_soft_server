@@ -136,7 +136,7 @@
         Clique no botão "Gerar Mensalidades" acima para gerar as mensalidades dos participantes.
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                &nsbp;
+                <h6>&nsbp;</h6>
             </div>
         </div>
     @endif
