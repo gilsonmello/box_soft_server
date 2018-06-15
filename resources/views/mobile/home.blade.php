@@ -62,23 +62,25 @@
                 </div>
             </div>
         @empty
-            Você não possui nenhum caixa com status fechado<br>
-            <ol>
-                <li>
-                    Escolha um caixa
-                </li>
-                <li>
-                    Clique sobre o ícone de configurações
-                </li>
-                <li>
-                    Clique em gerar mensalidades
-                </li>
-                <li>
-                    Clique no botão gerar mensalidades
-                </li>
-            </ol>
-            <a href="{{ route('mobile.boxes.index') }}" class="btn btn-primary btn-xs">Clique aqui para ir até os caixas</a>
+        
         @endforelse
+    @else
+        Você não possui nenhum caixa com status fechado<br>
+        <ol>
+            <li>
+                Escolha um caixa
+            </li>
+            <li>
+                Clique sobre o ícone de configurações
+            </li>
+            <li>
+                Clique em gerar mensalidades
+            </li>
+            <li>
+                Clique no botão gerar mensalidades
+            </li>
+        </ol>
+        <a href="{{ route('mobile.boxes.index') }}" class="btn btn-primary btn-xs">Clique aqui para ir até os caixas</a>
     @endif
 
     @if($boxes->isEmpty() || $participants->isEmpty())
