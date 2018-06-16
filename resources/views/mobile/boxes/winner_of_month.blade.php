@@ -2,13 +2,9 @@
 
 @extends('layouts.mobile')
 
-@section('mobile.screen_name')
-    <div class="navbar-brand" href="#">
-        Vencedor do mês
-    </div>
-@endsection
-
 @section('content')
+    @include('mobile.includes.messages')
+    <h4>Vencedor do mês</h4>
     <div class="row clearfix">
         <div class="col-lg-12 col-xs-12 col-md-12 col-sm-12">
             <div class="card" style="margin-bottom: 0;">

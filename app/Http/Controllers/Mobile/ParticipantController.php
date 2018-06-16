@@ -33,9 +33,20 @@ class ParticipantController extends Controller
      */
     public function index(Request $request)
     {
-        $participants = Participant::where('user_id', '=', auth()->user()->id)
-            ->paginate();
-        return view('mobile.participants.index', compact('participants'));
+        $participants = Participant::where('user_id', '=', auth()->user()->id);
+        
+        if(!empty($request->name) && isset($request->name)) {
+            $participants->where('name', 'like', '%'.$request->name.'%');
+        }  
+
+        if(!empty($request->email) && isset($request->email)) {
+            $participants->where('email', 'like', '%'.$request->email.'%');
+        } 
+        
+        return view('mobile.participants.index')
+            ->with('participants', $participants->paginate())
+            ->with('name', $request->name)
+            ->with('email', $request->email);
     }
 
     /**

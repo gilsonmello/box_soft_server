@@ -34,11 +34,25 @@ class BoxController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $boxes = Box::where('user_id', '=', auth()->user()->id)
-            ->paginate();
-        return view('mobile.boxes.index', compact('boxes'));
+        $boxes = Box::where('user_id', '=', auth()->user()->id);
+        
+        if(!empty($request->name) && isset($request->name)) {
+            $boxes->where('name', 'like', '%'.$request->name.'%');
+        }
+
+        if(isset($request->value_total)) {
+            $request->value_total = format_money($request->value_total);
+            if($request->value_total > 0) {
+                $boxes->where('value_total', '=', $request->value_total);
+            }
+        }
+
+        return view('mobile.boxes.index')
+            ->with('boxes', $boxes->paginate())
+            ->with('name', $request->name)
+            ->with('value_total', $request->value_total);
     }
 
     /**
@@ -86,7 +100,9 @@ class BoxController extends Controller
             if($award->save()) {
                 $box->last_award = date('Y-m-d');
                 $box->save();
-                return redirect()->route('mobile.boxes.winner_of_month', $box->id);
+                return redirect()
+                    ->route('mobile.boxes.winner_of_month', $box->id)
+                    ->withFlashSuccess('Sorteio efetuado com sucesso.');
             }
         } else {
             //Premiação por ordem
@@ -104,7 +120,9 @@ class BoxController extends Controller
             if($award->save()) {
                 $box->last_award = date('Y-m-d');
                 $box->save();
-                return redirect()->route('mobile.boxes.winner_of_month', $box->id);
+                return redirect()
+                    ->route('mobile.boxes.winner_of_month', $box->id)
+                    ->withFlashSuccess('Sorteio efetuado com sucesso.');
             }
         }
 

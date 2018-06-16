@@ -38,29 +38,27 @@
                 <div class="header">
                     <h2>
                         Filtro
-                        <a href="{{ route('mobile.boxes.create') }}" style="margin-right: 40px" class="btn btn-xs pull-right btn-primary">
-                            Cadastrar Novo Caixa
-                        </a>
                     </h2>
                     <div class="header-dropdown m-r--5">
                         <button type="button" aria-expanded="false" class="btn btn-xs" data-toggle="collapse" href="#filtro"><i class="fa fa-plus"></i></button>
                     </div>
                 </div>
                 {!! Form::open(array('route' => array('mobile.boxes.index'), 'class' => 'body collapse', 'id' => 'filtro', 'method' => 'get'))  !!}
+
                 <div class="row clearfix">
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
                         <div class="form-group form-float">
                             <div class="form-line">
                                 {!! Form::label('name', trans('strings.name'), ['class' => 'form-label']) !!}
-                                {!! Form::text('name', null, ['class' => 'form-control']  ) !!}
+                                {!! Form::text('name', $name, ['class' => 'form-control']  ) !!}
                             </div>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                         <div class="form-group form-float">
                             <div class="form-line">
-                                {!! Form::label('email', trans('strings.email'), ['class' => 'form-label']) !!}
-                                {!! Form::email('email', null, ['class' => 'form-control']  ) !!}
+                                {!! Form::label('value_total', "Valor Total", ['class' => 'form-label']) !!}
+                                {!! Form::text('value_total', $value_total, ['class' => 'form-control money-br']  ) !!}
                             </div>
                         </div>
                     </div>
@@ -70,7 +68,6 @@
             </div>
         </div>
     </div>
-
 
     @forelse($boxes as $value)
         <div class="row clearfix">
@@ -131,7 +128,7 @@
         </div>
 
     @empty
-        Você não possui nenhum caixa cadastrado, clique no botão acima para cadastrar
+        Nenhum registro encontrado
     @endforelse
 
     <div class="row clearfix">

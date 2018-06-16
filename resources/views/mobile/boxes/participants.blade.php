@@ -84,6 +84,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                            <div class="form-group form-float">
+                                <div class="form-line {{ $errors->has('method_payment') ? ' focused error' : '' }}">
+                                    {!! Form::label('method_payment', 'Método de Sorteio*', ['class' => '']) !!}
+                                    {!! Form::select('method_payment', [0 => 'Aleatório', 1 => 'Por ordem de chegada', 'disabled', 'readonly'], $box->method_payment, ['class' => 'form-control']) !!}
+                                    {!! Form::hidden('method_payment', $box->method_payment) !!}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     {{--<a href="{{route('mobile.boxes.index')}}" class="btn btn-danger">{{ trans('strings.cancel_button') }}</a>--}}
                     @if(!$box->has_instalment)

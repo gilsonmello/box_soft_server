@@ -37,9 +37,6 @@
                 <div class="header">
                     <h2>
                         Filtro
-                        <a href="{{ route('mobile.participants.create') }}" style="margin-right: 40px" class="btn btn-xs pull-right btn-primary">
-                            Cadastrar Novo Participante
-                        </a>
                     </h2>
                     <div class="header-dropdown m-r--5">
                         <button type="button" aria-expanded="false" class="btn btn-xs" data-toggle="collapse" href="#filtro"><i class="fa fa-plus"></i></button>
@@ -51,7 +48,7 @@
                             <div class="form-group form-float">
                                 <div class="form-line">
                                     {!! Form::label('name', trans('strings.name'), ['class' => 'form-label']) !!}
-                                    {!! Form::text('name', null, ['class' => 'form-control']  ) !!}
+                                    {!! Form::text('name', $name, ['class' => 'form-control']  ) !!}
                                 </div>
                             </div>
                         </div>
@@ -59,7 +56,7 @@
                             <div class="form-group form-float">
                                 <div class="form-line">
                                     {!! Form::label('email', trans('strings.email'), ['class' => 'form-label']) !!}
-                                    {!! Form::email('email', null, ['class' => 'form-control']  ) !!}
+                                    {!! Form::email('email', $email, ['class' => 'form-control']  ) !!}
                                 </div>
                             </div>
                         </div>
