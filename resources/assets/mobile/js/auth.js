@@ -41,6 +41,10 @@ $(function () {
             name: {
                 required: true
             },
+            password: {
+                required: true,
+                minlength: 6,
+            },
             password_confirmation: {
                 equalTo: '[name="password"]'
             },
@@ -52,6 +56,10 @@ $(function () {
         messages: {
             name: {
                 required: 'Campo Obrigatório'
+            },
+            password: {
+                required: "Campo Obrigatório",
+                minlength: "Informe a senha com no mínimo 6 carácteres",
             },
             terms: {
                 required: 'Campo Obrigatório'
