@@ -15,11 +15,11 @@
     <link rel="stylesheet" href="{{ asset('applications/mobile/css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('applications/mobile/css/plugins.css') }}">
 </head>
-<body class="login-page">
+<body class="login-page" style="background-color: white">
     <div class="login-box">
         <div class="logo">
-            <a href="javascript:void(0);">Box<b>Soft</b></a>
-            <small>Login</small>
+            <a style="color: #000" href="javascript:void(0);">Box<b>Soft</b></a>
+            <small style="color: #000">Login</small>
         </div>
         <div class="card">
             <div class="body">
