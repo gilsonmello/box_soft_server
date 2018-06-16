@@ -46,7 +46,9 @@ $(function () {
                 minlength: 6,
             },
             password_confirmation: {
-                equalTo: '[name="password"]'
+                equalTo: '[name="password"]',
+                minlength: 6,
+                required: true
             },
             email: {
                 required: true,
@@ -65,6 +67,7 @@ $(function () {
                 required: 'Campo Obrigatório'
             },
             password_confirmation: {
+                minlength: 'Informe a senha com no mínimo 6 carácteres',
                 required: 'Campo Obrigatório',
                 equalTo: 'O campo confirme a senha deve ser igual a senha informada'
             },
