@@ -105,7 +105,7 @@
         </div>
 
     @empty
-        Você não possui nenhum parcipante cadastrado, clique no botão acima para cadastrar
+        Você não possui nenhum parcipante cadastrado, clique no botão + na barra de menu para cadastrar.
     @endforelse
 
     <div class="row clearfix">

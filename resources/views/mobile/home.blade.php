@@ -96,7 +96,7 @@
             @if($boxes->isEmpty())
                 <a class="" href="{{route('mobile.boxes.create')}}">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="info-box bg-red hover-expand-effect">
+                        <div class="info-box bg-green hover-expand-effect">
                             <div class="icon">
                                 <i class="material-icons">create_new_folder</i>
                             </div>
@@ -110,9 +110,9 @@
             @if($participants->isEmpty())
                 <a class="" href="{{route('mobile.participants.create')}}">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="info-box bg-red hover-expand-effect">
+                        <div class="info-box bg-green hover-expand-effect">
                             <div class="icon">
-                                <i class="material-icons">add_box</i>
+                                <i class="material-icons">account_box</i>
                             </div>
                             <div class="content">
                                 <div class="text"><h3>Novo Participante</h3></div>

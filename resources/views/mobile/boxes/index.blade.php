@@ -128,7 +128,7 @@
         </div>
 
     @empty
-        Nenhum registro encontrado
+        <h6>Nenhum registro encontrado</h6>
     @endforelse
 
     <div class="row clearfix">
