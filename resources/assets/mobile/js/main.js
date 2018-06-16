@@ -5,6 +5,11 @@ $(function () {
             id: "-1",
             text: "Selecione uma opção",
         },
+        language: {
+           noResults: function(){
+               return "Nenhum registro encontrado";
+           }
+        }
     });
 
     $(".birth_date").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
