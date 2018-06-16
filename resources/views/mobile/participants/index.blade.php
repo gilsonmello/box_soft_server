@@ -89,11 +89,13 @@
                                             Editar
                                         </a>
                                     </li>
+                                    @if(count($value->boxes) == 0)
                                     <li>
                                         <a href="{{route('mobile.participants.destroy', $value->id)}}" data-method="delete" class="waves-effect waves-block">
                                             Deletar
                                         </a>
                                     </li>
+                                    @endif
                                 </ul>
                             </li>
                         </ul>

@@ -68,7 +68,7 @@
             </div>
         </div>
     </div>
-
+    <small>Caso o caixa esteja fechado, não será permitido editar e nem deletar.</small>
     @forelse($boxes as $value)
         <div class="row clearfix">
             <div class="col-lg-12 col-xs-12 col-md-12 col-sm-12">
