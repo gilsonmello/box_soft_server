@@ -88,20 +88,20 @@
                 Clique no botão gerar mensalidades
             </li>
         </ol>
-        <a href="{{ route('mobile.boxes.index') }}" class="btn btn-primary btn-xs">Clique aqui para ir até os caixas</a>
+        <a href="{{ route('mobile.boxes.index') }}" class="btn btn-primary btn-md">Clique aqui para ir até os caixas</a>
     @endif
-
+    <h6>&nbsp;</h6>
     @if($boxes->isEmpty() || $participants->isEmpty())
         <div class="row clearfix">
             @if($boxes->isEmpty())
                 <a class="" href="{{route('mobile.boxes.create')}}">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="info-box bg-pink hover-expand-effect">
+                        <div class="info-box bg-red hover-expand-effect">
                             <div class="icon">
                                 <i class="material-icons">create_new_folder</i>
                             </div>
                             <div class="content">
-                                <div class="text"><h3>Caixa</h3></div>
+                                <div class="text"><h3>Novo Caixa</h3></div>
                             </div>
                         </div>
                     </div>
@@ -110,12 +110,12 @@
             @if($participants->isEmpty())
                 <a class="" href="{{route('mobile.participants.create')}}">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="info-box bg-pink hover-expand-effect">
+                        <div class="info-box bg-red hover-expand-effect">
                             <div class="icon">
                                 <i class="material-icons">add_box</i>
                             </div>
                             <div class="content">
-                                <div class="text"><h3>Participante</h3></div>
+                                <div class="text"><h3>Novo Participante</h3></div>
                             </div>
                         </div>
                     </div>
