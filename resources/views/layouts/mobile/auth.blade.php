@@ -45,16 +45,16 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-4">
-                            <button class="btn btn-block btn-lg btn-primary waves-effect" type="submit">Login</button>
+                            <button class="btn btn-block btn-md btn-primary waves-effect" type="submit">Login</button>
                         </div>
                     </div>
                     <div class="row m-t-15 m-b--20">
                         <div class="col-xs-6">
-                            <a href="{{route('mobile.auth.create')}}">Cadastre-se</a>
+                            <a style="color: #000" href="{{route('mobile.auth.create')}}">Cadastre-se</a>
                         </div>
-                        <div class="col-xs-6 align-right">
+                        {{-- <div class="col-xs-6 align-right">
                             <a href="forgot-password.html">Forgot Password?</a>
-                        </div>
+                        </div> --}}
                     </div>
                 </form>
             </div>
