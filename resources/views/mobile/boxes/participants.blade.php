@@ -22,7 +22,6 @@
 
     <div class="row clearfix">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h4>Dados do Caixa</h4>
             <div class="card">
                 <div class="body">
                     {!! Form::model($box, ['route' => ['mobile.boxes.participants', $box->id], 'class' => '', 'role' => 'form', 'method' => 'post']) !!}
