@@ -22,9 +22,9 @@ class AuthController extends Controller
         }
 
         return redirect()
-            ->route('mobile.home')
+            ->route('mobile.auth.index')
             ->withInput()
-            ->withFlashDanger('Credenciais inválida');
+            ->withFlashDanger('Dados Inválidos');
     }
 
     /**

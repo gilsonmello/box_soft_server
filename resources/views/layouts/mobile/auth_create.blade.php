@@ -15,12 +15,12 @@
     <link rel="stylesheet" href="{{ asset('applications/mobile/css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('applications/mobile/css/plugins.css') }}">
 </head>
-<body class="signup-page">
+<body class="signup-page" style="background-color: #FFF">
 
-<div class="signup-box">
+<div class="signup-box" >
     <div class="logo">
-        <a href="javascript:void(0);">Box<b>Soft</b></a>
-        <small>Gerencie seus caixas com segurança</small>
+        <a style="color: #000" href="javascript:void(0);">Box<b>Soft</b></a>
+        <small style="color: #555">Gerencie seus caixas com segurança</small>
     </div>
     <div class="card">
         <div class="body">
@@ -69,7 +69,7 @@
                     <label for="terms">Eu li e aceito os <a href="javascript:void(0);">termos de uso</a>.</label>
                 </div>
 
-                <button class="btn btn-block btn-lg bg-pink waves-effect" type="submit">
+                <button class="btn btn-block btn-lg btn-primary waves-effect" type="submit">
                     Salvar
                 </button>
 
